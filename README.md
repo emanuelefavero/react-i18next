@@ -1,7 +1,9 @@
 # React i18next
 
-This is a simple example of how to use i18next with React
+This is a simple example of how to use i18next with React to translate your application
 
+> Note: `i18next` is a powerful internationalization framework for JavaScript that provides a complete solution to localize and translate your product
+>
 > Note: We are using `Vite` to build this project, but you can use `Next.js` or any other bundler
 
 ## How to use

@@ -66,3 +66,7 @@ export default function App() {
 - [react-i18next documentation](https://react.i18next.com/)
 - [Vite documentation](https://vitejs.dev/)
 - [Next.js documentation](https://nextjs.org/)
+
+## License
+
+- [MIT](LICENSE.md)

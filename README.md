@@ -1,30 +1,68 @@
-# React + TypeScript + Vite
+# React i18next
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a simple example of how to use i18next with React
 
-Currently, two official plugins are available:
+> Note: We are using `Vite` to build this project, but you can use `Next.js` or any other bundler
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## How to use
 
-## Expanding the ESLint configuration
+1. Clone this repository
+2. Install the dependencies with `npm install`
+3. Run the project
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+```bash
+npm run dev
+```
 
-- Configure the top-level `parserOptions` property like this:
+## How to add a new language
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
+- Create a new file called `translation.json` inside its respective language folder (e.g. `en` for English) and put it inside the `src/locales` folder
+
+```json
+{
+  "welcome": "Hello World"
 }
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+- Add the new language to the `i18n.ts` file
+
+```javascript
+// Other code here...
+
+// Import the new language
+import en from './locales/en/translation.json'
+
+// Add the new language to the resources object
+const resources = {
+  en: {
+    translation: en,
+  },
+  // Other languages here...
+}
+```
+
+- Add the translation in your React components:
+
+```jsx
+import './i18n.ts' // * Import the i18n configuration
+import { useTranslation } from 'react-i18next'
+
+export default function App() {
+  // * Use the t() function to translate text, and the i18n object to change the language
+  const { t, i18n } = useTranslation()
+
+  return (
+    <>
+      <h1>{t('welcome')}</h1>
+      <button onClick={() => i18n.changeLanguage('en')}>English</button>
+    </>
+  )
+}
+```
+
+## Resources
+
+- [i18next documentation](https://www.i18next.com/)
+- [react-i18next documentation](https://react.i18next.com/)
+- [Vite documentation](https://vitejs.dev/)
+- [Next.js documentation](https://nextjs.org/)

@@ -3,5 +3,6 @@
   "description": "Questa è un'app React con traduzioni automatiche. Cambia lingua per vedere il testo cambiare",
   "changeLanguage": "Cambia lingua",
   "english": "Inglese",
-  "italian": "Italiano"
+  "italian": "Italiano",
+  "spanish": "Spagnolo"
 }

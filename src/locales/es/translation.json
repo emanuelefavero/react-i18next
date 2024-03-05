@@ -1,0 +1,8 @@
+{
+  "welcome": "Hola",
+  "description": "Esta es una aplicación de React con traducciones automáticas. Cambia el idioma para ver cómo cambia el texto",
+  "changeLanguage": "Cambiar idioma",
+  "english": "Inglés",
+  "italian": "Italiano",
+  "spanish": "Español"
+}

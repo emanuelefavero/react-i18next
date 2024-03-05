@@ -15,14 +15,14 @@ function App() {
       <h1>{t('welcome')}</h1>
       <p>{t('description')}</p>
 
-      <label htmlFor='language-select'>Change Language:</label>
+      <label htmlFor='language-select'>{t('changeLanguage')}:</label>
       <select
         onChange={changeLanguage}
         defaultValue={i18n.language}
         id='language-select'
       >
-        <option value='en'>English</option>
-        <option value='it'>Italiano</option>
+        <option value='en'>{t('english')}</option>
+        <option value='it'>{t('italian')}</option>
         {/* Add more <option> elements here for additional languages */}
       </select>
     </>

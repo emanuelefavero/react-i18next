@@ -1,3 +1,7 @@
 {
-  "welcome": "Hello"
+  "welcome": "Hello",
+  "description": "This is a React app with automatic translations. Change the language to see the text change",
+  "changeLanguage": "Change language",
+  "english": "English",
+  "italian": "Italian"
 }

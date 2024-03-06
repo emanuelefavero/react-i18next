@@ -6,6 +6,10 @@ This is a simple example of how to use i18next with React to translate your appl
 >
 > Note: We are using `Vite` to build this project, but you can use `Next.js` or any other bundler
 
+### Screenshot
+
+<img src="screenshot.png" alt="screenshot" width="300">
+
 ## How to use
 
 1. Clone this repository
